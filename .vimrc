@@ -14,6 +14,17 @@ set autoindent
 set smartindent
 set nobackup
 set cursorline
+set mouse =a
+set hlsearch
+set incsearch
+
+set guifont=DejaVu_Sans_Mono:h16:cDEFAULT
+set fileencoding=utf8
+set fileencodings=utf8,usc-bom,gbk,cp936,gb2312,gb18030
+set autoindent
+set fdm=marker
+set shortmess=atI
+
 "=================bundle===================
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -30,7 +41,8 @@ filetype off                  " required
  Plugin 'vim-scripts/khaki.vim'
  Plugin '907th/vim-auto-save'
  Plugin 'Shougo/neocomplete.vim'
-
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'mattn/emmet-vim'
  " The following are examples of different formats supported.
  " Keep Plugin commands between vundle#begin/end.
  " plugin on GitHub repo
