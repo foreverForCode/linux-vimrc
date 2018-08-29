@@ -17,8 +17,7 @@ set cursorline
 set mouse =a
 set hlsearch
 set incsearch
-
-"set guifont=Courier_new:h16:cDEFAULT
+set guifont=Menlo:h18
 set fileencoding=utf8
 set fileencodings=utf8,usc-bom,gbk,cp936,gb2312,gb18030
 set autoindent
