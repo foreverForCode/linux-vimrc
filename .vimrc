@@ -101,10 +101,10 @@ let g:auto_save_events=["InsertLeave","TextChanged"]
 let g:auto_save_write_all_buffers = 1
 
 "================键盘映射==================
-"map <F3> "+gP<cr>
+map <F5> :exec '!python' shellescape(@%,1)<cr>
 ""map <F4> "+y<cr>
 map <F4> :let @a=expand('%:p')<cr>
-map <F5> :e ~/.vimrc<cr>
+map <F3> :e ~/.vimrc<cr>
 map <F6> :ToggleBufExplorer<cr>
 map <F7> :source ~\.vimrc<cr>
 map <F9> :normal gg=G<cr>
@@ -125,3 +125,4 @@ let g:neocomplcache_enable_auto_select = 1
 "==================emmet=================
 let g:user_emmet_leader_key='<C-z>'
 "======================================
+set tags=tags
