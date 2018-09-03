@@ -117,5 +117,13 @@ let g:DoxygenToolkit_authorName="freewm@163.com"
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
 "==================emmet=================
-let g:user_emmet_leader_key='<C-z>'
+let g:user_emmet_leader_key='<C-y>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 "======================================
+"===================tag===============
+set tags=~/path/tags
+
+set tags+=~/.vim/systags
+
+set tags=tags
