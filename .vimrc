@@ -24,10 +24,16 @@ set nobackup "去除备份
 set noswapfile
 set autochdir "自动切换目录
 set cursorline
-
+set autoread
 "=============vundle的配置内容===========================
 " set the runtime path to include Vundle and initialize
-set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+" we can use a config for all paltform
+if has("win16") || has("win32")
+    set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+endif
+"if has("gui_macvim")
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -51,6 +57,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-scripts/khaki.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'jiangmiao/auto-pairs'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -127,3 +134,5 @@ set tags=~/path/tags
 set tags+=~/.vim/systags
 
 set tags=tags
+"==============auto pair==============
+
