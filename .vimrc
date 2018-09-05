@@ -37,6 +37,9 @@ set so=7
 
 set wildmenu
 
+set autoindent"×Ô¶¯Ëõ½ø
+
+set showcmd
 " Always show current position
 
 set ruler
@@ -101,10 +104,20 @@ set tm=500
 set foldcolumn=1
 
 " Avoid garbled charachters in chinese language windows os
+
 let $LANG='en'
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
+
+set mouse=a  " allow mouse
+set fdm=marker " ´úÂëÕÛµþ
+set shortmess=atI
+set smartindent "ÖÇÄÜÑ¡Ôñ¶ÔÆë·½Ê½
+set cindent" cËõ½ø
+set autochdir "×Ô¶¯ÇÐ»»Ä¿Â¼
+set cursorline
+set autoread
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -117,9 +130,19 @@ syntax enable
 
 set encoding=utf8
 
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 " Use Unix as the standard file type
 
 set ffs=unix,dos,mac
+
+if has("win16") || has("win32")
+
+    set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
+else
+    set guifont=Menlo:h18
+endif
+
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -189,48 +212,6 @@ endfunction
 
 
 
-
-
-
-
-
-
-
-
-
-"=============»ù±¾ÉèÖÃ=================================
-set nu "ÉèÖÃÐÐºÅ
-
-set showcmd
-set shiftwidth=4 " Ëõ½ø4¸ö×Ö½Ú
-set softtabstop=4
-set tabstop=4
-set expandtab
-set ignorecase " ËÑË÷ºöÂÔ´óÐ¡Ð´
-set hlsearch
-set incsearch
-if has("win16") || has("win32")
-
-    set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
-else
-    set guifont=Menlo:h18
-endif
-
-set fileencoding=utf-8 "ÉèÖÃÎÄ¼þ×ÖÌå¸ñÊ½
-set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
-set backspace=indent,eol,start  "½â¾öwindow backspaceÊ§Ð§ÎÊÌâ
-set autoindent"×Ô¶¯Ëõ½ø
-filetype off                  " required
-set mouse=a  " allow mouse
-set fdm=marker " ´úÂëÕÛµþ
-set shortmess=atI
-set smartindent "ÖÇÄÜÑ¡Ôñ¶ÔÆë·½Ê½
-set cindent" cËõ½ø
-set nobackup "È¥³ý±¸·Ý
-set noswapfile
-set autochdir "×Ô¶¯ÇÐ»»Ä¿Â¼
-set cursorline
-set autoread
 "=============vundleµÄÅäÖÃÄÚÈÝ===========================
 " set the runtime path to include Vundle and initialize
 " we can use a config for all paltform
