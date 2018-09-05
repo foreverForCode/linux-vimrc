@@ -1,31 +1,200 @@
-"=============基本设置=================================
-set nocompatible " 不兼容vi模式
-set nu "设置行号
-syntax on "语法高亮
-set shiftwidth=4 " 缩进4个字节
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Sets how many lines of history VIM has to remember
+
+set history=500
+
+" Enable filetype plugins
+
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+
+set autoread
+
+" with a map leader it's possible to do extra key combinations
+" like <leader> w saves the current file
+
+let mapleader=","
+
+" Fast saving
+
+nmap <leader>w :w!<cr>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+
+set so=7
+
+" Turn on the wild menu
+
+set wildmenu
+
+" Always show current position
+
+set ruler
+
+" Height of the command bar
+
+set cmdheight=2
+
+" A buffer becomes hidden when it is abandoned
+
+set hid
+
+" Configure backspace so it acts as it should act
+
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+"Ignore case when searching
+
+set ignorecase
+
+" When searching try to be smart about cases
+
+set smartcase
+
+" Highlignt search results
+
+set hlsearch
+
+" Make search act like search in modern browers
+
+set incsearch
+
+" Don't redraw while executing macros(good performance config)
+
+set lazyredraw
+
+" For regular expressions turn magic on
+
+set magic
+
+" Show matching brackets when text indicator is over them
+
+set showmatch
+
+" How many tenths of a second to blink when matching brackets
+
+set mat=2
+
+" No annoying sound on error
+
+set noerrorbells
+
+set novisualbell
+
+set t_vb=
+
+set tm=500
+
+" Add a bit extra margin to the left
+
+set foldcolumn=1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax Highlignting
+
+syntax enable
+
+" Set utf8 as standard encoding ad en_US as the standard language
+
+set encoding=utf8
+
+" Use Unix as the standard file type
+
+set ffs=unix,dos,mac
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off ,since mote stuff is in SVN, git et.c anyway...
+
+set nobackup
+set nowb
+set noswapfile
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use spaces instead of tabs
+
+set expandtab
+
+" Be smart when using tabs;
+
+set smarttab
+
+" 1 tab == 4 spaces
+
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 charachters
+
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"=============»ù±¾ÉèÖÃ=================================
+set nocompatible " ²»¼æÈÝviÄ£Ê½
+set nu "ÉèÖÃÐÐºÅ
+syntax on "Óï·¨¸ßÁÁ
+set shiftwidth=4 " Ëõ½ø4¸ö×Ö½Ú
 set softtabstop=4
 set tabstop=4
 set expandtab
-set ignorecase " 搜索忽略大小写
+set ignorecase " ËÑË÷ºöÂÔ´óÐ¡Ð´
 set hlsearch
 set incsearch
-set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " 设置字体
-set fileencoding=utf-8 "设置文件字体格式
+set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
+set fileencoding=utf-8 "ÉèÖÃÎÄ¼þ×ÖÌå¸ñÊ½
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
-set backspace=indent,eol,start  "解决window backspace失效问题
-set autoindent"自动缩进
+set backspace=indent,eol,start  "½â¾öwindow backspaceÊ§Ð§ÎÊÌâ
+set autoindent"×Ô¶¯Ëõ½ø
 filetype off                  " required
 set mouse=a  " allow mouse
-set fdm=marker " 代码折叠
+set fdm=marker " ´úÂëÕÛµþ
 set shortmess=atI
-set smartindent "智能选择对齐方式
-set cindent" c缩进
-set nobackup "去除备份
+set smartindent "ÖÇÄÜÑ¡Ôñ¶ÔÆë·½Ê½
+set cindent" cËõ½ø
+set nobackup "È¥³ý±¸·Ý
 set noswapfile
-set autochdir "自动切换目录
+set autochdir "×Ô¶¯ÇÐ»»Ä¿Â¼
 set cursorline
 set autoread
-"=============vundle的配置内容===========================
+"=============vundleµÄÅäÖÃÄÚÈÝ===========================
 " set the runtime path to include Vundle and initialize
 " we can use a config for all paltform
 if has("win16") || has("win32")
@@ -83,27 +252,27 @@ filetype plugin indent on    " required
 
 
 
-"===============nerdTree配置================================
-" NerdTree才插件的配置信息
-""将F2设置为开关NERDTree的快捷键
+"===============nerdTreeÅäÖÃ================================
+" NerdTree²Å²å¼þµÄÅäÖÃÐÅÏ¢
+""½«F2ÉèÖÃÎª¿ª¹ØNERDTreeµÄ¿ì½Ý¼ü
 map <f2> :NERDTreeToggle<cr>
-""修改树的显示图标
+""ÐÞ¸ÄÊ÷µÄÏÔÊ¾Í¼±ê
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
-""窗口位置
+""´°¿ÚÎ»ÖÃ
 let g:NERDTreeWinPos='left'
-""窗口尺寸
+""´°¿Ú³ß´ç
 let g:NERDTreeSize=30
-""窗口是否显示行号
+""´°¿ÚÊÇ·ñÏÔÊ¾ÐÐºÅ
 let g:NERDTreeShowLineNumbers=1
-""不显示隐藏文件
+""²»ÏÔÊ¾Òþ²ØÎÄ¼þ
 let g:NERDTreeHidden=0
 "============autosave=====================
 let g:auto_save = 1
 let g:auto_save_events=["InsertLeave","TextChanged"]
 let g:auto_save_write_all_buffers = 1
 
-"================键盘映射==================
+"================¼üÅÌÓ³Éä==================
 map <F3> "+gP<cr>
 "map <F4> "+y<cr>
 map <F4> :let @a=expand('%:p')<cr>
@@ -111,16 +280,16 @@ map <F5> :e ~/.vimrc<cr>
 map <F6> :ToggleBufExplorer<cr>
 map <F7> :source ~\.vimrc<cr>
 map <F9> :normal gg=G<cr>
-"===================配色================
+"===================ÅäÉ«================
 if !has("gui_running")
     set t_Co=256
 endif
 colorscheme khaki
-"===================代码注释===========
+"===================´úÂë×¢ÊÍ===========
 let g:DoxygenToolkit_authorName="freewm@163.com" 
 " :DoxAuthor
 " :Dox
-"===================代码自动补全=========
+"===================´úÂë×Ô¶¯²¹È«=========
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
 "==================emmet=================
