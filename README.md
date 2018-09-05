@@ -26,6 +26,6 @@
 
 7. input :PluginInstall
 
-8. if you can see Installing you have success
+8. if you can see Installing you are success
 
 
