@@ -4,6 +4,7 @@
 
 " Sets how many lines of history VIM has to remember
 
+set nocompatible 
 set history=500
 
 " Enable filetype plugins
@@ -24,7 +25,6 @@ let mapleader=","
 
 nmap <leader>w :w!<cr>
 
-set showcmd
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -199,9 +199,9 @@ endfunction
 
 
 "=============»ù±¾ÉèÖÃ=================================
-set nocompatible " ²»¼æÈÝviÄ£Ê½
 set nu "ÉèÖÃÐÐºÅ
-syntax on "Óï·¨¸ßÁÁ
+
+set showcmd
 set shiftwidth=4 " Ëõ½ø4¸ö×Ö½Ú
 set softtabstop=4
 set tabstop=4
