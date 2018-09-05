@@ -238,6 +238,7 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'exvim/ex-taglist'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " git repos on your local machine (i.e. when working on your own plugin)
 Plugin 'jlanzarotta/bufexplorer'
@@ -291,7 +292,7 @@ let g:auto_save_events=["InsertLeave","TextChanged"]
 let g:auto_save_write_all_buffers = 1
 
 "================¼üÅÌÓ³Éä==================
-map <F3> "+gP<cr>
+map <F3> :TlistToggle<cr> 
 "map <F4> "+y<cr>
 map <F4> :let @a=expand('%:p')<cr>
 map <F5> :e ~/.vimrc<cr>
