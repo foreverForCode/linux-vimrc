@@ -24,7 +24,7 @@ let mapleader=","
 
 nmap <leader>w :w!<cr>
 
-
+set showcmd
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -209,7 +209,13 @@ set expandtab
 set ignorecase " ËÑË÷ºöÂÔ´óÐ¡Ð´
 set hlsearch
 set incsearch
-set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
+if has("win16") || has("win32")
+
+    set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
+else
+    set guifont=Menlo:h18
+endif
+
 set fileencoding=utf-8 "ÉèÖÃÎÄ¼þ×ÖÌå¸ñÊ½
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 set backspace=indent,eol,start  "½â¾öwindow backspaceÊ§Ð§ÎÊÌâ
