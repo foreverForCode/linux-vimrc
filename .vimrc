@@ -242,10 +242,13 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " git repos on your local machine (i.e. when working on your own plugin)
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/khaki.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'jiangmiao/auto-pairs'
+Bundle 'kien/ctrlp.vim'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -325,5 +328,11 @@ autocmd FileType html,css EmmetInstall
 "set tags=tags
 "let Tlist_GainFocus_On_ToggleOpen = 1 
 "let Tlist_Show_One_File = 1
-"==============auto pair==============
-
+"============== airline==============
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+"=============ctrlp=================
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+let g:ctrlp_working_path_mode = 'rw'
