@@ -299,6 +299,7 @@ map <F5> :e ~/.vimrc<cr>
 map <F6> :ToggleBufExplorer<cr>
 map <F7> :source ~\.vimrc<cr>
 map <F9> :normal gg=G<cr>
+"map <F12> :!ctags * <cr>
 "===================ÅäÉ«================
 if !has("gui_running")
     set t_Co=256
@@ -317,11 +318,12 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 "======================================
 "===================tag===============
-set tags=~/path/tags
+"set tags=~/path/tags
 
-set tags+=~/.vim/systags
+"set tags+=~/.vim/systags
 
-set tags=tags
+"set tags=tags
+"let Tlist_GainFocus_On_ToggleOpen = 1 
+"let Tlist_Show_One_File = 1
 "==============auto pair==============
-let Tlist_GainFocus_On_ToggleOpen = 1 
-let Tlist_Show_One_File = 1
+
