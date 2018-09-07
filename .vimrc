@@ -259,6 +259,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'godlygeek/tabular'
+Plugin 'Yggdroot/indentLine'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
