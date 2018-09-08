@@ -139,11 +139,14 @@ if has("win16") || has("win32")
 
     set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
 else
-    set guifont=Menlo:h18
+    set guifont=Monospace\ 16
 endif
 
+if has("gui_macvim")
 
+    set guifont=Menlo:h18
 
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
