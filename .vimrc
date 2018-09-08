@@ -139,11 +139,14 @@ if has("win16") || has("win32")
 
     set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
 else
-    set guifont=Menlo:h18
+    set guifont=Monospace\ 20
 endif
 
+if has("gui_macvim")
 
+    set guifont=Menlo:h18
 
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -259,6 +262,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'godlygeek/tabular'
+Plugin 'Yggdroot/indentLine'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
