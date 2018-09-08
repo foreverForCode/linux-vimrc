@@ -139,7 +139,7 @@ if has("win16") || has("win32")
 
     set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
 else
-    set guifont=Monospace\ 16
+    set guifont=Monospace\ 20
 endif
 
 if has("gui_macvim")
@@ -248,8 +248,8 @@ Plugin 'jlanzarotta/bufexplorer'
 if has("win16") || has("win32")
 
 else
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 endif
 
