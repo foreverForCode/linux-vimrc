@@ -6,7 +6,7 @@
 
 set nocompatible 
 set history=500
-
+set nu
 " Enable filetype plugins
 
 filetype plugin on
@@ -245,10 +245,24 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " git repos on your local machine (i.e. when working on your own plugin)
 Plugin 'jlanzarotta/bufexplorer'
+if has("win16") || has("win32")
+
+else
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+
+endif
+
+
 Plugin 'vim-scripts/khaki.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'jiangmiao/auto-pairs'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'terryma/vim-expand-region'
+Plugin 'godlygeek/tabular'
+Plugin 'Yggdroot/indentLine'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -302,6 +316,7 @@ map <F5> :e ~/.vimrc<cr>
 map <F6> :ToggleBufExplorer<cr>
 map <F7> :source ~\.vimrc<cr>
 map <F9> :normal gg=G<cr>
+map <F12> :bn <cr>
 "===================ÅäÉ«================
 if !has("gui_running")
     set t_Co=256
@@ -320,11 +335,18 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 "======================================
 "===================tag===============
-set tags=~/path/tags
+"set tags=~/path/tags
 
-set tags+=~/.vim/systags
+"set tags+=~/.vim/systags
 
-set tags=tags
-"==============auto pair==============
-let Tlist_GainFocus_On_ToggleOpen = 1 
-let Tlist_Show_One_File = 1
+"set tags=tags
+"let Tlist_GainFocus_On_ToggleOpen = 1 
+"let Tlist_Show_One_File = 1
+"============== airline==============
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+"=============ctrlp=================
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+let g:ctrlp_working_path_mode = 'rw'
