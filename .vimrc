@@ -135,19 +135,19 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
 set ffs=unix,dos,mac
 
-if has("win16") || has("win32")
+try
 
-    set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
-else
-    set guifont=Monospace\ 20
-endif
+    if has("win16") || has("win32")
 
-if has("gui_macvim")
+        set guifont=DejaVu_Sans_Mono:h14:cDEFAULT " ÉèÖÃ×ÖÌå
+    else
+        set guifont=Monospace\ 20
+    endif
+catch
+    
+    set guifont=Menlo:h20
 
-    set guifont=Menlo:h18
-
-endif
-
+endtry
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
