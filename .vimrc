@@ -245,8 +245,8 @@ Plugin 'jlanzarotta/bufexplorer'
 if has("win16") || has("win32")
 
 else
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 endif
 
