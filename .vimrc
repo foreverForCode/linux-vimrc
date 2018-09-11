@@ -246,7 +246,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 Plugin 'jlanzarotta/bufexplorer'
 if has("win16") || has("win32")
-
 else
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -258,11 +257,13 @@ Plugin 'vim-scripts/khaki.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'jiangmiao/auto-pairs'
-
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'godlygeek/tabular'
 Plugin 'Yggdroot/indentLine'
+"Plugin 'plasticboy/vim-markdown'
+Plugin 'kannokanno/previm'
+Plugin 'tyru/open-browser.vim'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
