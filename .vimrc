@@ -241,6 +241,7 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'LargeFile'
 "Plugin 'taglist.vim'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -351,3 +352,5 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
 let g:ctrlp_working_path_mode = 'rw'
+"==========largefile========
+let g:LargeFile=100
